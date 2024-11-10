@@ -39,6 +39,16 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\Accounting.DataLayer\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2014.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a" />
+    <Reference Include="Stimulsoft.Controls.Win, Version=2014.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Stimulsoft Reports.Ultimate 2014.3\Bin\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2014.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.Win, Version=2014.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Stimulsoft Reports.Ultimate 2014.3\Bin\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -69,6 +79,24 @@
     </Compile>
     <Compile Include="Customers\frmCustomers.Designer.cs">
       <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmNewAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmNewAccounting.Designer.cs">
+      <DependentUpon>frmNewAccounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +130,9 @@
     <Compile Include="WinValidator\Validator\RequiredFieldValidator.designer.cs">
       <DependentUpon>RequiredFieldValidator.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Accounting\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers\frmAddOrEditCustomer.resx">
       <DependentUpon>frmAddOrEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\frmCustomers.resx">
       <DependentUpon>frmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmNewAccounting.resx">
+      <DependentUpon>frmNewAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,6 +226,10 @@
     <None Include="Resources\1370791030_credit-card.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Accounting.Business\Accounting.Business.csproj">
+      <Project>{609cead5-d69a-4876-aaf6-7fb3f73328d8}</Project>
+      <Name>Accounting.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Accounting.DataLayer\Accounting.DataLayer.csproj">
       <Project>{724b803e-8610-46bc-9c3c-66a4193f8765}</Project>
       <Name>Accounting.DataLayer</Name>
@@ -197,11 +238,16 @@
       <Project>{88f71119-76e0-4a73-bef4-6434b6ccb526}</Project>
       <Name>Accounting.Utility</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Accounting.ViewModel\Accounting.ViewModel.csproj">
+      <Project>{dccc4823-a3b7-49af-adf2-7521ca6b5985}</Project>
+      <Name>Accounting.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no-profile-image.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
     <Content Include="WinValidator\New Text Document.txt" />
   </ItemGroup>
   <ItemGroup>

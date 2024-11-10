@@ -71,9 +71,11 @@
     <Compile Include="AccuntingType.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="context\UnitOfWork.cs" />
     <Compile Include="Customers.cs">
+      <DependentUpon>AccountingModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
       <DependentUpon>AccountingModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +115,10 @@
     <ProjectReference Include="..\Accounting.Utility\Accounting.Utility.csproj">
       <Project>{88f71119-76e0-4a73-bef4-6434b6ccb526}</Project>
       <Name>Accounting.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Accounting.ViewModel\Accounting.ViewModel.csproj">
+      <Project>{dccc4823-a3b7-49af-adf2-7521ca6b5985}</Project>
+      <Name>Accounting.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

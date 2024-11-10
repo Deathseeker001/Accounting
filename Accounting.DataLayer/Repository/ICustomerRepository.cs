@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Accounting.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Accounting.DataLayer.Repository
 
         IEnumerable<Customers> GetCustomerByFilter(string parameter);
 
+        List<ListCustomerViewModel> GetNamesCustomer(string filter = "");
+
         Customers GetCustomerById(int customerId);
 
         bool InsertCustomer(Customers customer);
@@ -22,6 +25,7 @@ namespace Accounting.DataLayer.Repository
 
         bool DeleteCustomer(int customerId);
 
-        
+        int GetCustomerIdByName(string name);
+        string GetCustomerNameById(int customerId);
     }
 }

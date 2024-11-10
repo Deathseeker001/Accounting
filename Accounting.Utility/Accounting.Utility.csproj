@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conventor\DateConventor.cs" />
     <Compile Include="conventor\RtlMessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
